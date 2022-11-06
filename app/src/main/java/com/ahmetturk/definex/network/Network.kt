@@ -1,3 +1,5 @@
+@file:Suppress("MatchingDeclarationName")
+
 package com.ahmetturk.definex.network
 
 import kotlinx.coroutines.Dispatchers
@@ -10,6 +12,7 @@ sealed class NetworkResult<out T> {
     data class Error(val error: String) : NetworkResult<Nothing>()
 }
 
+@Suppress("TooGenericExceptionCaught")
 suspend fun <T> apiCall(apiCall: suspend () -> T): NetworkResult<T> = withContext(Dispatchers.IO) {
     try {
         NetworkResult.Success(apiCall.invoke())
