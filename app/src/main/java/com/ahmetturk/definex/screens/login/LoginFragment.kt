@@ -32,6 +32,18 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
         binding.loginButton.setOnClickListener {
             login()
         }
+
+        binding.facebookButton.setOnClickListener {
+            showToast()
+        }
+
+        binding.twitterButton.setOnClickListener {
+            showToast()
+        }
+
+        binding.forgotPasswordButton.setOnClickListener {
+            showToast()
+        }
     }
 
     private fun login() {
@@ -49,5 +61,9 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
                 }
             }
         }
+    }
+
+    private fun showToast() {
+        Toast.makeText(requireContext(), "Coming Soon", Toast.LENGTH_SHORT).show()
     }
 }
