@@ -31,8 +31,9 @@ class MainAdapter(private val horizontalSpanCount: Int? = null) : RecyclerView.A
         val binding = ItemProductBinding.inflate(inflater, parent, false)
 
         horizontalSpanCount?.let {
+            val totalWidth = binding.root.resources.displayMetrics.widthPixels
             binding.root.layoutParams = binding.root.layoutParams.apply {
-                width = ((parent.width - it * (binding.root.marginStart + binding.root.marginEnd)) / it)
+                width = ((totalWidth - it * (binding.root.marginStart + binding.root.marginEnd)) / it)
             }
 
             if (it == THREE_COLUMN) {

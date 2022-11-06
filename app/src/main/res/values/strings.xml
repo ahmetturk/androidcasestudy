@@ -8,4 +8,9 @@
     <string name="twitter">TWITTER</string>
     <string name="i_forgot_my_pass">I FORGOT MY PASS</string>
     <string name="home">Home</string>
+    <string name="discover">Discover</string>
+    <string name="book">Book</string>
+    <string name="cart">Cart</string>
+    <string name="tag">Tag</string>
+    <string name="settings">Settings</string>
 </resources>

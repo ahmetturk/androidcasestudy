@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/mainFragment">
+    app:startDestination="@id/loginFragment">
 
     <fragment
         android:id="@+id/loginFragment"
@@ -16,4 +16,20 @@
         android:id="@+id/mainFragment"
         android:name="com.ahmetturk.definex.screens.main.MainFragment"
         android:label="MainFragment" />
+    <fragment
+        android:id="@+id/bookFragment"
+        android:name="com.ahmetturk.definex.screens.book.BookFragment"
+        android:label="BookFragment" />
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.ahmetturk.definex.screens.cart.CartFragment"
+        android:label="CartFragment" />
+    <fragment
+        android:id="@+id/tagFragment"
+        android:name="com.ahmetturk.definex.screens.tag.TagFragment"
+        android:label="TagFragment" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.ahmetturk.definex.screens.settings.SettingsFragment"
+        android:label="SettingsFragment" />
 </navigation>
