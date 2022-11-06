@@ -16,6 +16,12 @@ import com.ahmetturk.definex.databinding.ItemProductBinding
 import com.ahmetturk.definex.network.main.Product
 import com.bumptech.glide.Glide
 
+private const val THREE_COLUMN = 3
+private const val DESCRIPTION_TEXT_SIZE_AT_THREE_COLUMN = 12f
+private const val PRICE_TEXT_SIZE_WITHOUT_OLD_PRICE = 20f
+private const val PRICE_TEXT_SIZE_WITH_OLD_PRICE = 14f
+private const val RATING_BAR_DIVIDER = 20f // 100% divided by 5 stars
+
 class MainAdapter(private val horizontalSpanCount: Int? = null) : RecyclerView.Adapter<MainViewHolder>() {
 
     private var list: List<Product> = emptyList()
@@ -29,8 +35,8 @@ class MainAdapter(private val horizontalSpanCount: Int? = null) : RecyclerView.A
                 width = ((parent.width - it * (binding.root.marginStart + binding.root.marginEnd)) / it)
             }
 
-            if (it == 3) {
-                binding.descriptionTextView.textSize = 12f
+            if (it == THREE_COLUMN) {
+                binding.descriptionTextView.textSize = DESCRIPTION_TEXT_SIZE_AT_THREE_COLUMN
             }
         }
 
@@ -57,7 +63,11 @@ class MainViewHolder(private val binding: ItemProductBinding) : RecyclerView.Vie
         binding.descriptionTextView.text = product.description
         binding.priceTextView.text = "${product.price.value} ${product.price.currency}"
 
-        binding.priceTextView.textSize = if (product.oldPrice == null) 20f else 14f
+        binding.priceTextView.textSize = if (product.oldPrice == null) {
+            PRICE_TEXT_SIZE_WITHOUT_OLD_PRICE
+        } else {
+            PRICE_TEXT_SIZE_WITH_OLD_PRICE
+        }
 
         if (product.oldPrice == null) {
             binding.oldPriceTextView.visibility = View.GONE
@@ -87,7 +97,7 @@ class MainViewHolder(private val binding: ItemProductBinding) : RecyclerView.Vie
             binding.ratingBar.visibility = View.INVISIBLE
         } else {
             binding.ratingBar.visibility = View.VISIBLE
-            binding.ratingBar.rating = product.ratePercentage / 20f
+            binding.ratingBar.rating = product.ratePercentage / RATING_BAR_DIVIDER
         }
     }
 }
