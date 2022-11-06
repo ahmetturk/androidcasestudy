@@ -17,4 +17,9 @@
     <color name="loginButtonText">#DE000000</color>
     <color name="forgetPasswordStroke">#7A304FFE</color>
     <color name="dottedLine">#35000000</color>
+
+    <color name="discountText">#8EFF1744</color>
+
+    <color name="purpleGradientStart">#D500F9</color>
+    <color name="purpleGradientEnd">#FF1744</color>
 </resources>
