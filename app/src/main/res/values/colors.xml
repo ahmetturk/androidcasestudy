@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="accent">#6C92F4</color>
+
+    <color name="textInputEndIcon">#828282</color>
+    <color name="textInputText">#DE000000</color>
+    <color name="textInputActivationIndicator">#6C92F4</color>
+
+    <color name="titleTextGradientStart">#6C92F4</color>
+    <color name="titleTextGradientEnd">#1A73E9</color>
+
+    <color name="greenGradientStart">#72DFC5</color>
+    <color name="greenGradientEnd">#1DDE7D</color>
+
+    <color name="loginButtonText">#DE000000</color>
+    <color name="forgetPasswordStroke">#7A304FFE</color>
+    <color name="dottedLine">#35000000</color>
 </resources>

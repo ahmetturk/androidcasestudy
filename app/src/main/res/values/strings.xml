@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">DefineX</string>
+    <string name="email_address">E-mail address</string>
+    <string name="password">Password</string>
+    <string name="login_title">Definex Android\nCase Study</string>
+    <string name="login">LOGIN</string>
+    <string name="facebook">FACEBOOK</string>
+    <string name="twitter">TWITTER</string>
+    <string name="i_forgot_my_pass">I FORGOT MY PASS</string>
 </resources>
