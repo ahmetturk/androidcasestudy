@@ -9,11 +9,12 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.ahmetturk.definex.base.BaseFragment
 import com.ahmetturk.definex.databinding.FragmentMainBinding
+import com.ahmetturk.definex.repository.MainRepository
 import kotlinx.coroutines.launch
 
 class MainFragment : BaseFragment<FragmentMainBinding>() {
 
-    private val viewModel: MainViewModel by activityViewModels()
+    private val viewModel: MainViewModel by activityViewModels { MainViewModelFactory(MainRepository()) }
 
     private val firstAdapter by lazy { MainAdapter(horizontalSpanCount = 2) }
     private val secondAdapter by lazy { MainAdapter(horizontalSpanCount = 3) }
