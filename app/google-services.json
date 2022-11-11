@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "781985096476",
+    "project_id": "definex-8d125",
+    "storage_bucket": "definex-8d125.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:781985096476:android:43cf8e57026ce3c816d0d9",
+        "android_client_info": {
+          "package_name": "com.ahmetturk.definex"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "781985096476-5aqm8qllcla5v5e8k7rq5s1djsb8isii.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoAOSyHlXpkhdLtKlJlHqnKR9epFlwZ24"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "781985096476-5aqm8qllcla5v5e8k7rq5s1djsb8isii.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

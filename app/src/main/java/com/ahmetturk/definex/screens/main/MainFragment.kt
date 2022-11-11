@@ -7,6 +7,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import com.ahmetturk.definex.analytics.AnalyticsEvent
 import com.ahmetturk.definex.base.BaseFragment
 import com.ahmetturk.definex.databinding.FragmentMainBinding
 import com.ahmetturk.definex.repository.MainRepository
@@ -60,6 +61,8 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
                 }
             }
         }
+
+        analytics.sendEvent(AnalyticsEvent.DISCOVER_VIEWED)
     }
 
 }

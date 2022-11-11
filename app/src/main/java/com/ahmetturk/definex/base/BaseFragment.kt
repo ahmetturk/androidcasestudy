@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
+import com.ahmetturk.definex.DefineXApplication
 
 abstract class BaseFragment<T : ViewBinding> : Fragment() {
 
@@ -13,6 +14,8 @@ abstract class BaseFragment<T : ViewBinding> : Fragment() {
     protected val binding: T
         get() = _binding
             ?: throw IllegalStateException("Cannot access view after onDestroyView and before onViewCreated")
+
+    protected val analytics get() = DefineXApplication.Instance.analytics
 
     abstract fun getViewBinding(container: ViewGroup?): T
 

@@ -5,9 +5,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.content.ContextCompat
+import androidx.core.os.bundleOf
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.ahmetturk.definex.R
+import com.ahmetturk.definex.analytics.AnalyticsEvent
+import com.ahmetturk.definex.analytics.AnalyticsParam
 import com.ahmetturk.definex.base.BaseFragment
 import com.ahmetturk.definex.databinding.FragmentLoginBinding
 import com.ahmetturk.definex.network.NetworkResult
@@ -57,6 +60,11 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
                     Toast.makeText(requireContext(), "Email or password is wrong.", Toast.LENGTH_SHORT).show()
                 }
                 is NetworkResult.Success -> {
+                    analytics.sendEvent(
+                        AnalyticsEvent.LOGIN, bundleOf(
+                            AnalyticsParam.EMAIL to email
+                        )
+                    )
                     findNavController().navigate(R.id.action_loginFragment_to_mainFragment)
                 }
             }
