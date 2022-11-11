@@ -1,16 +1,16 @@
 <resources>
-    <string name="app_name">Ahmet Türk</string>
-    <string name="email_address">E-mail address</string>
-    <string name="password">Password</string>
-    <string name="login_title">Definex Android\nCase Study</string>
-    <string name="login">LOGIN</string>
+    <string name="app_name" translatable="false">Ahmet Türk</string>
+    <string name="email_address">E-posta Adresi</string>
+    <string name="password">Parola</string>
+    <string name="login_title" translatable="false">Definex Android\nCase Study</string>
+    <string name="login">GİRİŞ</string>
     <string name="facebook">FACEBOOK</string>
     <string name="twitter">TWITTER</string>
-    <string name="i_forgot_my_pass">I FORGOT MY PASS</string>
-    <string name="home">Home</string>
-    <string name="discover">Discover</string>
-    <string name="book">Book</string>
-    <string name="cart">Cart</string>
-    <string name="tag">Tag</string>
-    <string name="settings">Settings</string>
+    <string name="i_forgot_my_pass">PAROLAMI UNUTTUM</string>
+    <string name="discover">Keşfet</string>
+    <string name="book">Kitap</string>
+    <string name="cart">Sepet</string>
+    <string name="tag">Etiket</string>
+    <string name="settings">Ayarlar</string>
+    <string name="home">Ana Sayfa</string>
 </resources>
